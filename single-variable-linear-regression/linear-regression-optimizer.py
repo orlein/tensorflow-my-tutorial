@@ -2,7 +2,7 @@ import tensorflow as tf
 X = [1, 2, 3]
 Y = [1, 2, 3]
 
-W = tf.Variable(5.0)
+W = tf.Variable(-3.0)
 
 hypothesis = X * W
 
@@ -17,5 +17,5 @@ sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 
 for step in range(100):
-    print(step, sess.run(W))
+    print("step: {} // W: {} // cost: {}".format(step, sess.run(W), sess.run(cost)))
     sess.run(train)
