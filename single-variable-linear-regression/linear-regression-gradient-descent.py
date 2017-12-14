@@ -26,7 +26,6 @@ optimizer = tf.train.GradientDescentOptimizer(learning_rate = 0.1)
 train = optimizer.minimize(cost)
 #이건 자동 minimize임
 
-
 sess = tf.Session()
 
 sess.run(tf.global_variables_initializer())
