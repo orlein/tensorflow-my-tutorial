@@ -12,6 +12,7 @@ hypothesis = X * W
 
 cost = tf.reduce_mean(tf.square(hypothesis - Y))
 
+
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 
