@@ -1,6 +1,7 @@
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data 
 import random
+import matplotlib.pyplot as plt
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
 print(mnist)
@@ -48,3 +49,5 @@ with tf.Session() as sess:
     print("Label: ", sess.run(tf.argmax(mnist.test.labels[r:r + 1], 1)))
     print("Prediction: ", sess.run(
         tf.argmax(hypothesis, 1), feed_dict={X: mnist.test.images[r:r + 1]}))
+    plt.imshow(mnist.test.images[r:r + 1].reshape(28, 28), cmap='Greys', interpolation='nearest')
+    plt.show()
