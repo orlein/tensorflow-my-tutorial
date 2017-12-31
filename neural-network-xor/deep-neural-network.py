@@ -20,7 +20,6 @@ W3 = tf.Variable(tf.random_normal([10,10]), name='weight')
 b3 = tf.Variable(tf.random_normal([10]), name='bias')
 layer3 = tf.sigmoid(tf.matmul(layer2,W3) + b3)
 
-
 W4 = tf.Variable(tf.random_normal([10,1]), name='weight')
 b4 = tf.Variable(tf.random_normal([1]), name='bias')
 hypothesis = tf.sigmoid(tf.matmul(layer3,W4) + b4)
